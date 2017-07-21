@@ -1,0 +1,26 @@
+{
+  "name": "curso-react-ninja",
+  "version": "1.0.0",
+  "description": "Curso de React",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marquinhusgoncalves/curso-react-ninja.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marquinhusgoncalves/curso-react-ninja/issues"
+  },
+  "homepage": "https://github.com/marquinhusgoncalves/curso-react-ninja#readme"
+}
