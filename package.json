@@ -4,9 +4,11 @@
   "description": "Curso de React",
   "main": "index.js",
   "dependencies": {
-    "http-server": "^0.10.0"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "http-server": "^0.10.0",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
   },

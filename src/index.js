@@ -1,5 +1,11 @@
 'use strict';
 
-var sum = require('./app')
+var React = require('react')
+var ReactDom = require('react-dom')
 
-console.log(sum(2, 1));
+var Title = require('./app')
+
+ReactDom.render(
+  React.createElement(Title),
+  document.querySelector('[data-js="app"]')
+)
