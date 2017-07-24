@@ -18,11 +18,11 @@
     "babel-preset-stage-0": "^6.24.1",
     "http-server": "^0.10.0",
     "react-hot-loader": "^3.0.0-beta.2",
-    "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "standard": "^10.0.2",
+    "standard-loader": "^5.0.0",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^2.5.1",
+    "webpack-validator": "^3.0.0"
   },
   "repository": {
     "type": "git",
