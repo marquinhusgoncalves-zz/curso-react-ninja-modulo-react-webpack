@@ -24,6 +24,11 @@
     "webpack-dev-server": "^1.16.5",
     "webpack-validator": "^3.0.0"
   },
+  "standard": {
+    "globals": [
+      "alert"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marquinhusgoncalves/curso-react-ninja.git"

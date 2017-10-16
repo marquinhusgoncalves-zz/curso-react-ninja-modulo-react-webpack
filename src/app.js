@@ -13,7 +13,9 @@ import Square from './square'
 class App extends Component {
   render () {
     return (
-      <div className='container'>
+      <div className='container' onClick={(e) => {
+        alert('Clicou')
+      }}>
         <Title name='Fernando' />
         {['blue', 'red', 'green'].map((square, index) => (
           <Square key={index} color={square} />
