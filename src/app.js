@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import Title from './title'
 import Square from './square'
+import Button from './button'
 
 // const App = React.createClass({
 //   render: function () {
@@ -16,6 +17,9 @@ class App extends Component {
       <div className='container' onClick={(e) => {
         alert('Clicou')
       }}>
+        {/* <Button text='Botão' /> */}
+        {/* Use children */}
+        <Button>Texto</Button>
         <Title name='Fernando' />
         {['blue', 'red', 'green'].map((square, index) => (
           <Square key={index} color={square} />
