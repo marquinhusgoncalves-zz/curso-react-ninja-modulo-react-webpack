@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 // import Title from './title'
 // import Square from './square'
 // import Button from './button'
-import LikeButton from './like-button'
-import SearchButton from './search-button'
+// import LikeButton from './like-button'
+// import SearchButton from './search-button'
 
 // const App = React.createClass({
 //   render: function () {
@@ -14,6 +14,13 @@ import SearchButton from './search-button'
 // })
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      text: 'Marquinhus'
+    }
+  }
+
   render () {
     return (
       // <div className='container' onClick={(e) => {
@@ -27,9 +34,14 @@ class App extends Component {
       //     <Square key={index} color={square} />
       //   ))}
       // </div>
-      <div className='container'>
-        <LikeButton />
-        <SearchButton />
+      // <div className='container'>
+      //   <LikeButton />
+      //   <SearchButton />
+      // </div>
+      <div className='container' onClick={() => this.setState({
+        text: 'Trocou de nome'
+      })}>
+        {this.state.text}
       </div>
     )
   }
