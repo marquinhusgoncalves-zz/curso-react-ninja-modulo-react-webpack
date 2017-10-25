@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react'
 // import Title from './title'
-// import Square from './square'
-// import Button from './button'
+import Square from './square'
+import Button from './button'
 // import LikeButton from './like-button'
 // import SearchButton from './search-button'
 
@@ -17,7 +17,8 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      text: 'Marquinhus'
+      // text: 'Marquinhus'
+      color: 'green'
     }
   }
 
@@ -38,10 +39,22 @@ class App extends Component {
       //   <LikeButton />
       //   <SearchButton />
       // </div>
-      <div className='container' onClick={() => this.setState({
-        text: 'Trocou de nome'
-      })}>
-        {this.state.text}
+
+      // <div className='container' onClick={() => this.setState({
+      //   text: 'Trocou de nome'
+      // })}>
+      //   {this.state.text}
+      // </div>
+
+      <div>
+        <Square color={this.state.color} />
+        {['red', 'green', 'blue'].map((color) => (
+          <Button
+            key={color}
+            handleClick={() => this.setState({ color })}>
+            {color}
+          </Button>
+        ))}
       </div>
     )
   }
