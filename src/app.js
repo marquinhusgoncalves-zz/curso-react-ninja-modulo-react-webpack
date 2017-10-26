@@ -20,11 +20,21 @@ class App extends Component {
     this.state = {
       // text: 'Marquinhus'
       // color: 'green'
+      time: 0,
       showTimer: true
     }
   }
 
+  componentWillMount () {
+    console.log('componentWillMount app')
+  }
+
+  componentDidMount () {
+    console.log('componentDidMount app')
+  }
+
   render () {
+    console.log('render')
     return (
       // <div className='container' onClick={(e) => {
       //   alert('Clicou')
@@ -60,11 +70,11 @@ class App extends Component {
       // </div>
 
       <div>
-        {this.state.showTimer && <Timer />}
+        <Timer time={this.state.time} />
 
         <button onClick={() => {
-          this.setState({showTimer: !this.state.showTimer})
-        }}> Show / Hide Timer </button>
+          this.setState({time: this.state.showtime + 10})
+        }}>Change props</button>
       </div>
     )
   }
