@@ -3,10 +3,10 @@
 import React, { Component } from 'react'
 // import Title from './title'
 // import Square from './square'
-// import Button from './button'
+import Button from './button'
 // import LikeButton from './like-button'
 // import SearchButton from './search-button'
-import Timer from './timer'
+// import Timer from './timer'
 
 // const App = React.createClass({
 //   render: function () {
@@ -69,12 +69,18 @@ class App extends Component {
       //   ))}
       // </div>
 
-      <div>
-        <Timer time={this.state.time} />
+      // <div>
+      //   <Timer time={this.state.time} />
 
-        <button onClick={() => {
-          this.setState({time: this.state.showtime + 10})
-        }}>Change props</button>
+      //   <button onClick={() => {
+      //     this.setState({time: this.state.showtime + 10})
+      //   }}>Change props</button>
+      // </div>
+
+      <div>
+        <Button handleClick={() => console.log('CLicou')}>
+          Clique aqui
+        </Button>
       </div>
     )
   }
