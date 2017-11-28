@@ -22,8 +22,9 @@ class App extends Component {
       // color: 'green'
       time: 0,
       showTimer: true,
-      value: 'Valor inicial',
-      checked: false
+      // value: 'Valor inicial',
+      checked: false,
+      value: 2
     }
   }
 
@@ -85,26 +86,39 @@ class App extends Component {
       //   </Button>
       // </div>
 
+      // <div>
+      //   <form>
+      //     <input type='text' value={this.state.value} onChange={(e) => {
+      //       this.setState({
+      //         value: e.target.value
+      //       })
+      //     }} />
+      //     <label>
+      //       <input
+      //         type='checkbox'
+      //         value='my-checkbox'
+      //         checked={this.state.checked}
+      //         onChange={(e) => {
+      //           this.setState({checked: !this.state.checked})
+      //         }} />
+      //         Checkbox
+      //     </label>
+
+      //     <input type='radio' name='rd' value='1' defaultChecked />Radio 1
+      //     <input type='radio' name='rd' value='2' />Radio 2
+      //   </form>
+      // </div>
       <div>
         <form>
-          <input type='text' value={this.state.value} onChange={(e) => {
+          <select multiple value={['1', '3']} onChange={(e) => {
             this.setState({
               value: e.target.value
             })
-          }} />
-          <label>
-            <input
-              type='checkbox'
-              value='my-checkbox'
-              checked={this.state.checked}
-              onChange={(e) => {
-                this.setState({checked: !this.state.checked})
-              }} />
-              Checkbox
-          </label>
-
-          <input type='radio' name='rd' value='1' defaultChecked />Radio 1
-          <input type='radio' name='rd' value='2' />Radio 2
+          }}>
+            <option value='1'>Opção 1</option>
+            <option value='2'>Opção 2</option>
+            <option value='3'>Opção 3</option>
+          </select>
         </form>
       </div>
     )
