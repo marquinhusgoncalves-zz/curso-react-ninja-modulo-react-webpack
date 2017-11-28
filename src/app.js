@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 // import Title from './title'
 // import Square from './square'
-import Button from './button'
+// import Button from './button'
 // import LikeButton from './like-button'
 // import SearchButton from './search-button'
 // import Timer from './timer'
@@ -21,7 +21,8 @@ class App extends Component {
       // text: 'Marquinhus'
       // color: 'green'
       time: 0,
-      showTimer: true
+      showTimer: true,
+      value: 'Valor inicial'
     }
   }
 
@@ -77,10 +78,20 @@ class App extends Component {
       //   }}>Change props</button>
       // </div>
 
+      // <div>
+      //   <Button handleClick={() => console.log('CLicou')}>
+      //     Clique aqui
+      //   </Button>
+      // </div>
+
       <div>
-        <Button handleClick={() => console.log('CLicou')}>
-          Clique aqui
-        </Button>
+        <form>
+          <input type='text' value={this.state.value} onChange={(e) => {
+            this.setState({
+              value: e.target.value
+            })
+          }} />
+        </form>
       </div>
     )
   }
