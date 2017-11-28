@@ -122,9 +122,28 @@ class App extends Component {
       //   </form>
       // </div>
 
+      // Input Checkbox pode ser usado onClick ou onChange
       <div>
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            console.log('event', e)
+          }}
+
+          onChange={(e) => {
+            console.log('name', e.target.name)
+            console.log('value', e.target.value)
+          }}>
+
+          <input type='text' name='name' />
+          <input type='email' name='email' />
           <textarea value='textarea value' />
+          <input
+            type='checkbox'
+            name='checkbox'
+            onClick={(e) => console.log('onclick event', e)}
+            onChange={(e) => console.log('onchange event', e)} />
+          <button type='submit'>Enviar</button>
         </form>
       </div>
     )
