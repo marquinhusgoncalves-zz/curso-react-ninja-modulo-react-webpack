@@ -22,7 +22,8 @@ class App extends Component {
       // color: 'green'
       time: 0,
       showTimer: true,
-      value: 'Valor inicial'
+      value: 'Valor inicial',
+      checked: false
     }
   }
 
@@ -91,6 +92,19 @@ class App extends Component {
               value: e.target.value
             })
           }} />
+          <label>
+            <input
+              type='checkbox'
+              value='my-checkbox'
+              checked={this.state.checked}
+              onChange={(e) => {
+                this.setState({checked: !this.state.checked})
+              }} />
+              Checkbox
+          </label>
+
+          <input type='radio' name='rd' value='1' defaultChecked />Radio 1
+          <input type='radio' name='rd' value='2' />Radio 2
         </form>
       </div>
     )
