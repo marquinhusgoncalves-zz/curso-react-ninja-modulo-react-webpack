@@ -24,7 +24,8 @@ class App extends Component {
       showTimer: true,
       // value: 'Valor inicial',
       checked: false,
-      value: 2
+      value: 2,
+      showContent: false
     }
   }
 
@@ -123,28 +124,51 @@ class App extends Component {
       // </div>
 
       // Input Checkbox pode ser usado onClick ou onChange
+      // <div>
+      //   <form
+      //     onSubmit={(e) => {
+      //       e.preventDefault()
+      //       console.log('event', e)
+      //     }}
+
+      //     onChange={(e) => {
+      //       console.log('name', e.target.name)
+      //       console.log('value', e.target.value)
+      //     }}>
+
+      //     <input type='text' name='name' />
+      //     <input type='email' name='email' />
+      //     <textarea value='textarea value' />
+      //     <input
+      //       type='checkbox'
+      //       name='checkbox'
+      //       onClick={(e) => console.log('onclick event', e)}
+      //       onChange={(e) => console.log('onchange event', e)} />
+      //     <button type='submit'>Enviar</button>
+      //   </form>
+      // </div>
+
       <div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault()
-            console.log('event', e)
-          }}
-
-          onChange={(e) => {
-            console.log('name', e.target.name)
-            console.log('value', e.target.value)
-          }}>
-
-          <input type='text' name='name' />
-          <input type='email' name='email' />
-          <textarea value='textarea value' />
+        <label>
           <input
             type='checkbox'
-            name='checkbox'
-            onClick={(e) => console.log('onclick event', e)}
-            onChange={(e) => console.log('onchange event', e)} />
-          <button type='submit'>Enviar</button>
-        </form>
+            checked={this.state.checked}
+            onChange={() => {
+              this.setState({
+                checked: !this.state.checked
+              }, () => {
+                this.setState({
+                  showContent: this.state.checked
+                })
+              })
+              // O setState tem a função de callback acima porque é assíncrono
+              // this.setState({
+              //   showContent: this.state.checked
+              // })
+            }}
+          />Mostrar conteúdo
+        </label>
+        {this.state.showContent && <div>Olha eu aqui !!!</div>}
       </div>
     )
   }
